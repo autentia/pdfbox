@@ -725,6 +725,9 @@ public class PDFTextStripper extends PDFStreamEngine
                      * of regression test failures.  So, I'm leaving it be for now. */
                     if(!overlap(positionY, positionHeight, maxYForLine, maxHeightForLine))
                     {
+                    	if ( !line.isEmpty() ) {
+                    		writeLineStart(line);
+                    	}
                         writeLine(normalize(line,isRtlDominant,hasRtl),isRtlDominant);
                         line.clear();
 
@@ -1654,6 +1657,13 @@ public class PDFTextStripper extends PDFStreamEngine
         if(result){
             position.setParagraphStart();
         }
+    }
+    
+    /**
+     * Write something (if defined) at the start of a line.
+     * @throws IOException if something went wrong
+     */
+    protected void writeLineStart(List<TextPosition> lastTextPosition) throws IOException{
     }
 
     /**
