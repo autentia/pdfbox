@@ -32,15 +32,11 @@
 
   <name>PDFBox reactor</name>
 
-  <scm>
-    <connection>
-      scm:svn:http://svn.apache.org/repos/asf/pdfbox/trunk
-    </connection>
-    <developerConnection>
-      scm:svn:https://svn.apache.org/repos/asf/pdfbox/trunk
-    </developerConnection>
-    <url>http://svn.apache.org/viewvc/pdfbox/trunk</url>
-  </scm>
+	<scm>
+		<connection>scm:git:git://github.com/autentia/pdfbox.git</connection>
+		<developerConnection>scm:git:git@github.com:autentia/pdfbox.git</developerConnection>
+		<url>https://github.com/autentia/pdfbox</url>
+	</scm>
 
   <modules>
     <module>parent</module>
