@@ -118,6 +118,20 @@
     </pluginManagement>
   </build>
 
+	<!-- Para hacer el despliegue en los servidores de Autentia -->
+	<distributionManagement>
+		<site>
+			<id>autentia-site</id>
+			<name>Autentia Site</name>
+			<url>${autentia.site.distribution}/pdfbox</url>
+		</site>
+		<repository>
+			<id>autentia-repository</id>
+			<name>Autentia Repository</name>
+			<url>${autentia.mvn.distribution}</url>
+		</repository>
+	</distributionManagement>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
