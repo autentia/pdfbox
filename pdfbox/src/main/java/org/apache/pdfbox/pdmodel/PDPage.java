@@ -705,7 +705,7 @@ public class PDPage implements COSObjectable, Printable
      */
     public BufferedImage convertToImage(int imageType, int resolution) throws IOException
     {
-        PDRectangle mBox = findMediaBox();
+        PDRectangle mBox = findCropBox();
         float widthPt = mBox.getWidth();
         float heightPt = mBox.getHeight();
         float scaling = resolution / (float)DEFAULT_USER_SPACE_UNIT_DPI;
